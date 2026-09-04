@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">ROX2026 Robot Placeholder</title>
+  <desc id="desc">ロボット画像が未登録の場合の技術的なプレースホルダー</desc>
+  <rect width="1600" height="900" fill="#121419"/>
+  <g fill="none" stroke="#70757b" stroke-width="8">
+    <path d="M445 650h710l-55 100H500z"/>
+    <path d="M565 650V455h470v195M660 455l45-160h190l45 160"/>
+    <rect x="725" y="215" width="150" height="80" rx="8"/>
+    <circle cx="570" cy="735" r="75"/><circle cx="1030" cy="735" r="75"/>
+    <path d="M590 735h70m300 0h70M800 215v-70"/>
+  </g>
+  <g fill="#b6ff4d"><circle cx="800" cy="145" r="10"/><circle cx="445" cy="650" r="10"/><circle cx="1155" cy="650" r="10"/></g>
+  <text x="800" y="840" fill="#a4a7aa" font-family="Arial, sans-serif" font-size="28" text-anchor="middle" letter-spacing="6">ROX2026 · REPLACE WITH ROBOT IMAGE</text>
+</svg>

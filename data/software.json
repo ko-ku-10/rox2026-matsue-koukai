@@ -1,0 +1,58 @@
+[
+  {
+    "id": "apriltag",
+    "name": "AprilTag Localization",
+    "description": "AprilTagを利用してフィールド上の自己位置を推定します。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/vision",
+    "tag": "ROX2026-final"
+  },
+  {
+    "id": "localization",
+    "name": "State Estimation",
+    "description": "カメラ・エンコーダーなどの情報を統合して現在位置を扱います。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/localization",
+    "tag": "ROX2026-final"
+  },
+  {
+    "id": "odometry",
+    "name": "Odometry",
+    "description": "車輪エンコーダーをもとに移動量と姿勢変化を計算します。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/drive",
+    "tag": "ROX2026-final"
+  },
+  {
+    "id": "motor-control",
+    "name": "Motor Control",
+    "description": "走行・射出・保持機構のモーターを安全に制御します。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/motor",
+    "tag": "ROX2026-final"
+  },
+  {
+    "id": "ps5-input",
+    "name": "PS5 Controller Input",
+    "description": "PS5コントローラーの入力をロボットの操作へ変換します。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/input",
+    "tag": "ROX2026-final"
+  },
+  {
+    "id": "pneumatic-control",
+    "name": "Pneumatic Control",
+    "description": "ソレノイドバルブを制御し、空圧機構を安全に動作させます。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/pneumatics",
+    "tag": "ROX2026-final"
+  },
+  {
+    "id": "game-control",
+    "name": "GAME Control",
+    "description": "GAME1・GAME2の競技手順に合わせ、機構の連携動作を管理します。",
+    "repository": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot",
+    "source": "https://github.com/YOUR_ORGANIZATION/ROX2026-robot/tree/ROX2026-final/src/game",
+    "tag": "ROX2026-final"
+  }
+]

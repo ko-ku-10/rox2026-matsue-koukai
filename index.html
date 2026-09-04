@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="ROX2026で使用するロボットの設計・機構・制御・開発過程を公開する技術サイト。" />
+    <meta name="theme-color" content="#090a0c" />
+    <title>ROX2026 — Robot Technology Archive</title>
+    <link rel="icon" href="assets/robot/robot-placeholder.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#robot">インタラクティブロボットへ移動</a>
+
+    <header class="site-header" id="top">
+      <a class="brand" href="#top" aria-label="ROX2026 ホーム">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span>ROX<span>2026</span></span>
+      </a>
+      <nav class="site-nav" aria-label="メインナビゲーション">
+        <a href="#robot">Robot</a>
+        <a href="#systems">Systems</a>
+        <a href="#software">Software</a>
+        <a href="#history">History</a>
+        <a href="#downloads">Downloads</a>
+      </nav>
+      <a class="header-action" href="#robot">Explore <span aria-hidden="true">↗</span></a>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <img class="hero-image" src="assets/robot/robot-hero.png" alt="黒と銀のフレームで構成されたROX2026競技ロボットの全景" />
+        <div class="hero-overlay"></div>
+        <div class="hero-content page-width">
+          <p class="eyebrow"><span></span> MATSUE KOSEN ROBOT</p>
+          <h1 id="hero-title">ROX2026<br /><em>ROBOT.</em></h1>
+          <p class="hero-lead">Engineering, control and design.<br />Open for everyone.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#robot">Explore the Robot <span aria-hidden="true">↓</span></a>
+            <a class="button button-quiet" id="hero-source-link" href="#software">View Source Code <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-meta" aria-label="ROX2026 robot summary">
+          <span>ROBOT PLATFORM / 01</span><span>OPEN TECHNICAL ARCHIVE</span>
+        </div>
+      </section>
+
+      <section class="intro page-width section-space" aria-labelledby="overview-title">
+        <div>
+          <p class="eyebrow"><span></span> ROBOT OVERVIEW</p>
+          <h2 id="overview-title">競技のために、<br />細部まで設計する。</h2>
+        </div>
+        <div class="intro-copy">
+          <p>ROX2026のロボットは、移動・把持・射出・認識・制御をひとつのシステムとして設計しています。このアーカイブでは、完成品だけでなく、試作と改善の過程も公開します。</p>
+          <dl class="metrics">
+            <div><dt>7</dt><dd>公開中のシステム</dd></div>
+            <div><dt>4WD</dt><dd>全方向移動</dd></div>
+            <div><dt>OPEN</dt><dd>設計・制御を共有</dd></div>
+          </dl>
+        </div>
+      </section>
+
+      <section class="interactive-section section-space" id="robot" aria-labelledby="robot-title">
+        <div class="section-heading page-width">
+          <div>
+            <p class="eyebrow"><span></span> INTERACTIVE ROBOT</p>
+            <h2 id="robot-title">機構を、<br />触って知る。</h2>
+          </div>
+          <p>ポイントを選択すると、設計の意図、使用部品、関連データを確認できます。</p>
+        </div>
+        <div class="robot-stage page-width">
+          <div class="robot-canvas" id="robot-canvas" aria-label="ROX2026ロボットの部位を選択">
+            <img src="assets/robot/robot-hero.png" alt="操作ポイントが重ねて表示されたROX2026競技ロボット" />
+            <div id="hotspot-layer" class="hotspot-layer" aria-live="polite"></div>
+          </div>
+          <p class="interaction-hint"><span class="pulse-dot" aria-hidden="true"></span> Hotspotを選択して詳細を見る</p>
+        </div>
+      </section>
+
+      <section class="systems page-width section-space" id="systems" aria-labelledby="systems-title">
+        <div class="section-heading narrow">
+          <div>
+            <p class="eyebrow"><span></span> MAIN SYSTEMS</p>
+            <h2 id="systems-title">ひとつの勝利を<br />支える、七つの系統。</h2>
+          </div>
+          <a class="text-link" href="#robot">すべてをインタラクティブに見る <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="system-grid" id="system-grid" aria-live="polite"></div>
+      </section>
+
+      <section class="software-section section-space" id="software" aria-labelledby="software-title">
+        <div class="page-width">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow"><span></span> SOFTWARE</p>
+              <h2 id="software-title">機械を動かす、<br />ソフトウェア。</h2>
+            </div>
+            <p>Robot本体のソースコードは別リポジトリで管理しています。ここでは大会時点のタグを基準とした参照先を案内します。</p>
+          </div>
+          <div class="software-grid" id="software-grid" aria-live="polite"></div>
+          <p class="tag-note">ARCHIVE REFERENCE: <code>ROX2026-final</code> <span>大会終了後、このタグまたはReleaseを作成してください。</span></p>
+        </div>
+      </section>
+
+      <section class="history page-width section-space" id="history" aria-labelledby="history-title">
+        <div class="section-heading narrow">
+          <div>
+            <p class="eyebrow"><span></span> DEVELOPMENT HISTORY</p>
+            <h2 id="history-title">試して、壊して、<br />より良くする。</h2>
+          </div>
+          <p>大会機に至るまでの判断と更新を、履歴として残します。</p>
+        </div>
+        <div class="history-list" id="history-list" aria-live="polite"></div>
+      </section>
+
+      <section class="downloads section-space" id="downloads" aria-labelledby="downloads-title">
+        <div class="page-width">
+          <div class="section-heading narrow">
+            <div>
+              <p class="eyebrow"><span></span> DOWNLOADS</p>
+              <h2 id="downloads-title">設計データを、<br />次の挑戦へ。</h2>
+            </div>
+            <p>公開可能な設計資料・CAD・関連ドキュメントを一覧で管理します。</p>
+          </div>
+          <div class="download-filters" id="download-filters" aria-label="ダウンロードのカテゴリを絞り込む"></div>
+          <div class="download-list" id="download-list" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section class="about page-width section-space" id="about" aria-labelledby="about-title">
+        <div class="about-card">
+          <p class="eyebrow"><span></span> ABOUT THIS ARCHIVE</p>
+          <h2 id="about-title">知識を、<br />次のロボットへ。</h2>
+          <p>ROX2026は、競技ロボットの設計と開発の知見を、チームの内外へ開くための技術アーカイブです。掲載内容は継続して更新します。</p>
+          <a class="button button-primary" href="https://github.com/" target="_blank" rel="noreferrer">Project on GitHub <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="page-width footer-inner">
+        <a class="brand" href="#top" aria-label="ページ上部へ戻る"><span class="brand-mark" aria-hidden="true">R</span><span>ROX<span>2026</span></span></a>
+        <p>Built to be inspected, improved and shared.</p>
+        <p>© 2026 ROX2026 Project</p>
+      </div>
+    </footer>
+
+    <div class="panel-backdrop" id="panel-backdrop" hidden></div>
+    <aside class="detail-panel" id="detail-panel" aria-labelledby="detail-title" aria-modal="true" aria-hidden="true" role="dialog" tabindex="-1">
+      <div class="panel-handle" aria-hidden="true"></div>
+      <div class="panel-header">
+        <p class="panel-index" id="detail-index">SYSTEM / 01</p>
+        <button class="icon-button" id="panel-close" type="button" aria-label="詳細パネルを閉じる">×</button>
+      </div>
+      <div class="panel-body" id="panel-content"></div>
+    </aside>
+
+    <template id="loading-template"><p class="loading-text">データを読み込んでいます…</p></template>
+    <noscript><p class="noscript">このサイトは機構データの表示にJavaScriptを使用しています。ブラウザでJavaScriptを有効にしてください。</p></noscript>
+    <script src="js/main.js"></script>
+  </body>
+</html>

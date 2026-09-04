@@ -1,0 +1,7 @@
+# Local workspace folders; not part of the GitHub Pages site.
+work/
+outputs/
+
+# Local tooling
+.DS_Store
+Thumbs.db
