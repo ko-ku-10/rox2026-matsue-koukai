@@ -17,6 +17,7 @@
     components: [],
     software: [],
     history: [],
+    loadFailures: new Set(),
     activeDownloadCategory: "all",
     lastFocusedElement: null
   };
@@ -76,6 +77,10 @@
 
   function errorMarkup() {
     return '<p class="data-error">データを読み込めませんでした。<br>ローカル確認時は README.md の手順どおり、Webサーバー経由で開いてください。</p>';
+  }
+
+  function emptyMarkup(message) {
+    return `<p class="empty-state">${escapeHtml(message)}</p>`;
   }
 
   function setInitialLoadingState() {
@@ -138,7 +143,9 @@
   function renderSoftware() {
     if (!elements.softwareGrid) return;
     if (!appState.software.length) {
-      elements.softwareGrid.innerHTML = errorMarkup();
+      elements.softwareGrid.innerHTML = appState.loadFailures.has("software")
+        ? errorMarkup()
+        : emptyMarkup("Robotプログラムの公開リンクを追加してください。");
       return;
     }
     elements.softwareGrid.innerHTML = appState.software.map((software, index) => {
@@ -164,7 +171,9 @@
   function renderHistory() {
     if (!elements.historyList) return;
     if (!appState.history.length) {
-      elements.historyList.innerHTML = errorMarkup();
+      elements.historyList.innerHTML = appState.loadFailures.has("history")
+        ? errorMarkup()
+        : emptyMarkup("開発履歴を追加してください。");
       return;
     }
     elements.historyList.innerHTML = appState.history.map((entry) => `
@@ -339,6 +348,9 @@
     appState.components = components.status === "fulfilled" ? components.value : [];
     appState.software = software.status === "fulfilled" ? software.value : [];
     appState.history = history.status === "fulfilled" ? history.value : [];
+    ["components", "software", "history"].forEach((key, index) => {
+      if (results[index].status === "rejected") appState.loadFailures.add(key);
+    });
 
     renderHotspots();
     renderSystems();
